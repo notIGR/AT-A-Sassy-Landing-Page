@@ -23,7 +23,7 @@ a {
 }
 
 .hero {
-  // This is where the bulk of the SCSS styling needs to be done
+    // This is where the bulk of the SCSS styling needs to be done
   @include set-bg($primary-color);
   height: 600px;
   // Take a look at the other files we've built already. How can they be useful here?
@@ -36,18 +36,40 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    ul {
+      display: flex;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 2.5rem;
+    }
+
+    a {
+      color: text-color-picker($primary-color);
+    }
+
+    a:hover {
+      color: $secondary-color;
+    }
   }
 
-  li {
-    padding: 1rem;
-  }
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
 
-  a {
-    color: text-color-picker($primary-color);
-  }
+    img {
+      width: 50%;
+    }
 
-  a:hover {
-    color: $secondary-color;
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
   }
 }
 
